@@ -1,5 +1,8 @@
 export class FaceSnap {
 
+  location?: string; // Propriété optionnelle
+
+// Constructeur de la classe
   constructor(public title: string,
               public description: string,
               public imageUrl: string,
@@ -7,6 +10,8 @@ export class FaceSnap {
               public snaps: number ) {
 
   }
+
+
   addSnap(): void {
     this.snaps += 1;
   }
@@ -14,5 +19,10 @@ export class FaceSnap {
   removeSnap(): void {
     this.snaps -= 1;
   }
+
+  setLocation(location: string): void {
+    this.location = location;
+  }
+
 
 }
